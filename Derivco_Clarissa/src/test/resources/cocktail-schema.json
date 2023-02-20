@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "drinks": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string",
+                                    "qt-uri-protocols": [
+                                        "https"
+                                    ],
+                                    "qt-uri-extensions": [
+                                        ".jpg"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "required": [
+                "drinks"
+            ],
+            "title": "Welcome9"
+        }
+    }
+}

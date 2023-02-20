@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome1",
+    "definitions": {
+        "Welcome1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ingredients": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ingredient"
+                    }
+                }
+            },
+            "required": [
+                "ingredients"
+            ],
+            "title": "Welcome1"
+        },
+        "Ingredient": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "idIngredient": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "strIngredient": {
+                    "type": "string"
+                },
+                "strDescription": {
+                    "type": "string"
+                },
+                "strType": {
+                    "type": "string"
+                },
+                "strAlcohol": {
+                    "type": "string"
+                },
+                "strABV": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "idIngredient",
+                "strABV",
+                "strAlcohol",
+                "strDescription",
+                "strIngredient",
+                "strType"
+            ],
+            "title": "Ingredient"
+        }
+    }
+}
